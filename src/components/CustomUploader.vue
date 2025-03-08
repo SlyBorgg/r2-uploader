@@ -1064,9 +1064,6 @@ watch(uploadToFolder, (newVal) => {
   } else if (customFolderName.value && customFolderName.value !== '/') {
     // When checked and there's a custom folder name, apply it
     let folderPath = customFolderName.value
-    if (!folderPath.startsWith('/')) {
-      folderPath = '/' + folderPath
-    }
     if (!folderPath.endsWith('/')) {
       folderPath = folderPath + '/'
     }
@@ -1100,9 +1097,6 @@ let handleFolderNameBlur = function () {
 
   // Normalize folder path to ensure it starts and ends with /
   let folderPath = customFolderName.value
-  if (!folderPath.startsWith('/')) {
-    folderPath = '/' + folderPath
-  }
   if (!folderPath.endsWith('/')) {
     folderPath = folderPath + '/'
   }
